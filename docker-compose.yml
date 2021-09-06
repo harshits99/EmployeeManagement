@@ -1,0 +1,34 @@
+version: "3.8"
+
+services: 
+ db:
+   image: 'postgres'
+   ports: 
+    - '5432:5432'
+   environment: 
+    POSTGRES_USER: 'postgres'
+    POSTGRES_PASSWORD: 'password'
+    POSTGRES_DB: 'employeedb'
+   volumes: 
+    - ./pgdata:/var/lib/postgres/data 
+
+ frontend:
+  build: ./frontend
+  ports: 
+   - '4200:4200'
+
+
+ backend:
+  build: ./backend
+  ports: 
+   - '3000:3000'
+  # depends_on: 
+  #  - db
+  #  environment: 
+  #   DB_URL: postgresql://localhost:5432/employeedb
+
+
+      
+
+
+
