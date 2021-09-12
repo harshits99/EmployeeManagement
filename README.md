@@ -1,2 +1,3 @@
 # EmployeeManagement
-node, express, angular, docker
+node, express, angular, docker, postgres
+
