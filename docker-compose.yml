@@ -8,8 +8,8 @@ services:
     - '5432:5432'
    restart: 'always' 
    environment: 
-    POSTGRES_USER: 'postgres'
-    POSTGRES_PASSWORD: 'password'
+    POSTGRES_USER: 'docker'
+    POSTGRES_PASSWORD: '123456'
     POSTGRES_DB: 'employeedb'
    volumes: 
     - ./pgdata:/var/lib/postgres/data 
