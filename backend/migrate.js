@@ -6,7 +6,7 @@ const db = knex({
         host: 'db',
         user: 'docker',
         password: '123456',
-        database: 'employeedb',
+        database: 'docker',
     },
 });
 

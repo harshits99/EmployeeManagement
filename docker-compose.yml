@@ -2,22 +2,22 @@ version: "3.8"
 
 services: 
  db:
-   container_name: "db"
-   image: 'postgres:alpine'
+  #  container_name: "db"
+   image: 'postgres'
    ports: 
     - '5432:5432'
-   restart: 'always' 
+  #  restart: 'always' 
    environment: 
     POSTGRES_USER: 'docker'
     POSTGRES_PASSWORD: '123456'
-    POSTGRES_DB: 'employeedb'
+    POSTGRES_DB: 'docker'
    volumes: 
     - ./pgdata:/var/lib/postgres/data 
 
- frontend:
-  build: ./frontend
-  ports: 
-   - '4200:4200'
+#  frontend:
+#   build: ./frontend
+#   ports: 
+#    - '4200:4200'
 
 
  backend:
